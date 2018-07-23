@@ -68,6 +68,55 @@ window.onload=function(){
 	}
 
 
+	//轮播图选项卡
+	let bann=document.getElementById("banner");
+	console.log(banner)
+	let banner_lbtn=document.getElementsByClassName("banner_lbtn")[0]
+	console.log(banner_lbtn)
+	let banner_rbtn=document.getElementsByClassName("banner_rbtn")[0]
+	console.log(banner_rbtn)
+	let y=banner.getElementsByClassName("y");
+	console.log(y)
+	
+	let num=0;
+
+	let t=setInterval(move,2000);
+
+	banner.onmouseenter=function(){
+		clearInterval(t);
+
+	}
+	banner.onmouseleave=function(){
+		t=setInterval(move,2000);	
+	}
+	function move(){
+		num++;
+		if(num==y.length){
+			num=0;
+		}
+		for(i=0;i<y.length;i++){
+			y[i].style.zIndex=5;
+		}
+		y[num].style.zIndex=10;
+	}
+	function move1(){
+		num--;
+		if(num<0){
+			num=y.length-1;
+		}
+		for(i=0;i<y.length;i++){
+			y[i].style.zIndex=5;
+		}
+		y[num].style.zIndex=10;
+	}
+ 	banner_rbtn.onclick=function(){
+ 		move();
+ 	}
+ 	banner_lbtn.onclick=function(){
+ 		move1();
+ 	}
+
+
 
 
 
