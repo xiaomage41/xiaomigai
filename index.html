@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>小米官网</title>
     <link rel="icon" type="image/png" = href="../img/logo.png">
+  	<script src="js/animate.js"></script>
   	<link rel="stylesheet" href="css/index.css">
   	<link rel="stylesheet" href="css/public.css">
   	<script src="js/index.js"></script>
@@ -1151,7 +1152,7 @@
 		<div class="banner_btn banner_rbtn">&gt;</div>
 
 		<div class="banner_yuanhe">
-			<div class="banner_yuan"></div>
+			<div class="banner_yuan hot"></div>
 			<div class="banner_yuan"></div>
 			<div class="banner_yuan"></div>
 			<div class="banner_yuan"></div>
@@ -1206,19 +1207,21 @@
 		<div class="star_top">
 			<h1>小米明星单品</h1>
 			<div class="star_btn">
-				<div >&lt;</div>
-				<div class="star_btn1">&gt;</div>
+				<button>&lt;</button>
+				<button>&gt;</button>
+
 			</div>
 		</div>
 		<div class="star_bottom">
-			
+			<div class="star_itemb">
 			<div class="star_item">
 				<img src="img/xmad_15125569508853_uWAIK.png" alt="">
 				<h1>红米5A</h1>
 				<h2>8天超长待机。137g超博机身</h2>
 				<h3>599元</h3>
 			</div>
-
+			</div>
+			<div class="star_ttt">
 			<div class="star_item star_item4">
 				<img src="img/mix2.png" alt="">
 
@@ -1247,6 +1250,35 @@
 				<h2>更轻更薄，像杂志一样随身携带</h2>
 				<h3>3599元起</h3>
 			</div>
+			<div class="star_item star_item4">
+				<img src="img/mix2.png" alt="">
+
+				<h1>小米mix2</h1>
+				<h2>全面屏2.0，5.99"大屏</h2>
+				<h3>3299元起</h3>
+			</div>
+
+			<div class="star_item star_item3">
+				<img src="img/4a.png" alt="">
+				<h1>小米电视4A 43英寸标准版</h1>
+				<h2>全高清HDR 四核高性能处理器</h2>
+				<h3>1999元起</h3>
+			</div>
+
+			<div class="star_item star_item2">
+				<img src="img/mi6.png" alt="">
+				<h1>小米6</h1>
+				<h2>变焦双摄，四轴防抖</h2>
+				<h3>2299元起</h3>
+			</div>
+
+			<div class="star_item star_item1">
+				<img src="img/bijiben.png" alt="">
+				<h1>小米笔记本</h1>
+				<h2>更轻更薄，像杂志一样随身携带</h2>
+				<h3>3599元起</h3>
+			</div>
+		</div>
 		</div>
 	</section>
 	<!-- 明星单品结束 -->
@@ -2703,8 +2735,9 @@
 		<div class="star_top">
 			<h1>为你推荐</h1>
 			<div class="star_btn">
-				<div >&lt;</div>
-				<div class="star_btn1">&gt;</div>
+				<button>&lt;</button>
+				<button>&gt;</button>
+
 			</div>
 		</div>
 		<div class="star_bottom">
@@ -2811,93 +2844,306 @@
 			<h1>内容</h1>
 		</div>
 		<div class="neirong_bottom">
-			<div class="neirong_item">
-			<h1>图书</h1>
-			<div class="neirong_item1">
-			<h2>哈利波特与被诅咒的孩子</h2>
-			</div>
-			<div class="neirong_item2">
-				<h3>哈利波特第八个故事中文版震撼来袭！特别彩排版剧本！</h3>
-			</div>
-			<div class="neirong_item3">
-				<h4>29.37元</h4>				
-			</div>
-			<div class="neirong_item4">
-				<img src="img/halibote.png" alt="">	
-			</div>
-			<div class="neirongdian">
+			
+			
+			<div class="neirong_k">
+				<div class="neirong_rbtn">&gt;</div>
+				<div class="neirong_lbtn">&lt;</div>
+				<div class="neirongdian">
+				<div class="neirongxiaodian quan"></div>
 				<div class="neirongxiaodian"></div>
-				<div class="neirongxiaodian1"></div>
-				<div class="neirongxiaodian1"></div>
-				<div class="neirongxiaodian2"></div>
-			</div>
-			</div>
-		
-			<div class="neirong_item">
-			<h1>MIUI主题</h1>
-			<div class="neirong_item1">
-			<h2>米奇-有你有我</h2>
-			</div>
-			<div class="neirong_item2">
-				<h3>米奇来啦，小米主题与迪士尼乐园首次合作，打造精品迪士尼乐园主题</h3>
-			</div>
-			<div class="neirong_item3">
-				<h4>12米币</h4>				
-			</div>
-			<div class="neirong_item4">
-				<img src="img/miqi.png" alt="">	
-			</div>
-			<div class="neirongdian">
 				<div class="neirongxiaodian"></div>
-				<div class="neirongxiaodian1"></div>
-				<div class="neirongxiaodian1"></div>
-				<div class="neirongxiaodian2"></div>
-			</div>
-			</div>
+				<div class="neirongxiaodian"></div>
+				</div>
+				<div class="neirong_item hot" style="z-index: 10;left:0;" >
+					<h1>图书</h1>
+				<div class="neirong_item1">
+					<h2>哈利波特与被诅咒的孩子</h2>
+				</div>
+				<div class="neirong_item2">
+					<h3>哈利波特第八个故事中文版震撼来袭！特别彩排版剧本！</h3>
+				</div>
+				<div class="neirong_item3">
+					<h4>29.37元</h4>				
+				</div>
+				<div class="neirong_item4">
+					<img src="img/halibote.png" alt="">	
+				</div>		
+					</div>
+			
 
-			<div class="neirong_item">
-			<h1>游戏</h1>
-			<div class="neirong_item1">
-			<h2>剑侠世界2</h2>
-			</div>
-			<div class="neirong_item2">
-				<h3>潮流武侠，炫动江湖</h3>
-			</div>
-			<div class="neirong_item3">
-				<h4></h4>				
-			</div>
-			<div class="neirong_item4">
-				<img src="img/jian.png" alt="">	
-			</div>
-			<div class="neirongdian">
-				<div class="neirongxiaodian"></div>
-				<div class="neirongxiaodian1"></div>
-				<div class="neirongxiaodian1"></div>
-				<div class="neirongxiaodian2"></div>
-			</div>
-			</div>
+				<div class="neirong_item">
+					<h1>MIUI主题</h1>
+				<div class="neirong_item1">
+					<h2>米奇-有你有我</h2>
+				</div>
+				<div class="neirong_item2">
+					<h3>米奇来啦，小米主题与迪士尼乐园首次合作，打造精品迪士尼乐园主题</h3>
+				</div>
+				<div class="neirong_item3">
+					<h4>12米币</h4>				
+				</div>
+				<div class="neirong_item4">
+					<img src="img/miqi.png" alt="">	
+				</div>			
+				</div>
 
-			<div class="neirong_item neirong_item5">
-			<h1>应用</h1>
-			<div class="neirong_item1">
-			<h2>2017金米将</h2>
+				<div class="neirong_item">
+					<h1>游戏</h1>
+				<div class="neirong_item1">
+					<h2>剑侠世界2</h2>
+				</div>
+				<div class="neirong_item2">
+					<h3>潮流武侠，炫动江湖</h3>
+				</div>
+				<div class="neirong_item3">
+					<h4></h4>				
+				</div>
+				<div class="neirong_item4">
+					<img src="img/jian.png" alt="">	
+				</div>	
+				</div>
+
+				<div class="neirong_item neirong_item5">
+					<h1>应用</h1>
+				<div class="neirong_item1">
+					<h2>2017金米将</h2>
+				</div>
+				<div class="neirong_item2">
+					<h3>最优秀的游戏与应用</h3>
+				</div>
+				<div class="neirong_item3">
+					<h4></h4>				
+				</div>
+				<div class="neirong_item4">
+					<img src="img/jinmi.png" alt="">	
+				</div>			
+				</div>
 			</div>
-			<div class="neirong_item2">
-				<h3>最优秀的游戏与应用</h3>
-			</div>
-			<div class="neirong_item3">
-				<h4></h4>				
-			</div>
-			<div class="neirong_item4">
-				<img src="img/jinmi.png" alt="">	
-			</div>
-			<div class="neirongdian">
+			<div class="neirong_k">
+				<div class="neirong_rbtn">&gt;</div>
+				<div class="neirong_lbtn">&lt;</div>
+				<div class="neirongdian">
+				<div class="neirongxiaodian quan"></div>
 				<div class="neirongxiaodian"></div>
-				<div class="neirongxiaodian1"></div>
-				<div class="neirongxiaodian1"></div>
-				<div class="neirongxiaodian2"></div>
+				<div class="neirongxiaodian"></div>
+				<div class="neirongxiaodian"></div>
+				</div>
+				<div class="neirong_item hot" style="z-index: 10;left:0;" >
+					<h1>图书</h1>
+				<div class="neirong_item1">
+					<h2>哈利波特与被诅咒的孩子</h2>
+				</div>
+				<div class="neirong_item2">
+					<h3>哈利波特第八个故事中文版震撼来袭！特别彩排版剧本！</h3>
+				</div>
+				<div class="neirong_item3">
+					<h4>29.37元</h4>				
+				</div>
+				<div class="neirong_item4">
+					<img src="img/halibote.png" alt="">	
+				</div>		
+					</div>
+			
+
+				<div class="neirong_item">
+					<h1>MIUI主题</h1>
+				<div class="neirong_item1">
+					<h2>米奇-有你有我</h2>
+				</div>
+				<div class="neirong_item2">
+					<h3>米奇来啦，小米主题与迪士尼乐园首次合作，打造精品迪士尼乐园主题</h3>
+				</div>
+				<div class="neirong_item3">
+					<h4>12米币</h4>				
+				</div>
+				<div class="neirong_item4">
+					<img src="img/miqi.png" alt="">	
+				</div>			
+				</div>
+
+				<div class="neirong_item">
+					<h1>游戏</h1>
+				<div class="neirong_item1">
+					<h2>剑侠世界2</h2>
+				</div>
+				<div class="neirong_item2">
+					<h3>潮流武侠，炫动江湖</h3>
+				</div>
+				<div class="neirong_item3">
+					<h4></h4>				
+				</div>
+				<div class="neirong_item4">
+					<img src="img/jian.png" alt="">	
+				</div>	
+				</div>
+
+				<div class="neirong_item neirong_item5">
+					<h1>应用</h1>
+				<div class="neirong_item1">
+					<h2>2017金米将</h2>
+				</div>
+				<div class="neirong_item2">
+					<h3>最优秀的游戏与应用</h3>
+				</div>
+				<div class="neirong_item3">
+					<h4></h4>				
+				</div>
+				<div class="neirong_item4">
+					<img src="img/jinmi.png" alt="">	
+				</div>			
+				</div>
 			</div>
+			<div class="neirong_k">
+				<div class="neirong_rbtn">&gt;</div>
+				<div class="neirong_lbtn">&lt;</div>
+				<div class="neirongdian">
+				<div class="neirongxiaodian quan"></div>
+				<div class="neirongxiaodian"></div>
+				<div class="neirongxiaodian"></div>
+				<div class="neirongxiaodian"></div>
+				</div>
+				<div class="neirong_item hot" style="z-index: 10;left:0;" >
+					<h1>图书</h1>
+				<div class="neirong_item1">
+					<h2>哈利波特与被诅咒的孩子</h2>
+				</div>
+				<div class="neirong_item2">
+					<h3>哈利波特第八个故事中文版震撼来袭！特别彩排版剧本！</h3>
+				</div>
+				<div class="neirong_item3">
+					<h4>29.37元</h4>				
+				</div>
+				<div class="neirong_item4">
+					<img src="img/halibote.png" alt="">	
+				</div>		
+					</div>
+			
+
+				<div class="neirong_item">
+					<h1>MIUI主题</h1>
+				<div class="neirong_item1">
+					<h2>米奇-有你有我</h2>
+				</div>
+				<div class="neirong_item2">
+					<h3>米奇来啦，小米主题与迪士尼乐园首次合作，打造精品迪士尼乐园主题</h3>
+				</div>
+				<div class="neirong_item3">
+					<h4>12米币</h4>				
+				</div>
+				<div class="neirong_item4">
+					<img src="img/miqi.png" alt="">	
+				</div>			
+				</div>
+
+				<div class="neirong_item">
+					<h1>游戏</h1>
+				<div class="neirong_item1">
+					<h2>剑侠世界2</h2>
+				</div>
+				<div class="neirong_item2">
+					<h3>潮流武侠，炫动江湖</h3>
+				</div>
+				<div class="neirong_item3">
+					<h4></h4>				
+				</div>
+				<div class="neirong_item4">
+					<img src="img/jian.png" alt="">	
+				</div>	
+				</div>
+
+				<div class="neirong_item neirong_item5">
+					<h1>应用</h1>
+				<div class="neirong_item1">
+					<h2>2017金米将</h2>
+				</div>
+				<div class="neirong_item2">
+					<h3>最优秀的游戏与应用</h3>
+				</div>
+				<div class="neirong_item3">
+					<h4></h4>				
+				</div>
+				<div class="neirong_item4">
+					<img src="img/jinmi.png" alt="">	
+				</div>			
+				</div>
 			</div>
+			<div class="neirong_k">
+				<div class="neirong_rbtn">&gt;</div>
+				<div class="neirong_lbtn">&lt;</div>
+				<div class="neirongdian">
+				<div class="neirongxiaodian quan"></div>
+				<div class="neirongxiaodian"></div>
+				<div class="neirongxiaodian"></div>
+				<div class="neirongxiaodian"></div>
+				</div>
+				<div class="neirong_item hot" style="z-index: 10;left:0;" >
+					<h1>图书</h1>
+				<div class="neirong_item1">
+					<h2>哈利波特与被诅咒的孩子</h2>
+				</div>
+				<div class="neirong_item2">
+					<h3>哈利波特第八个故事中文版震撼来袭！特别彩排版剧本！</h3>
+				</div>
+				<div class="neirong_item3">
+					<h4>29.37元</h4>				
+				</div>
+				<div class="neirong_item4">
+					<img src="img/halibote.png" alt="">	
+				</div>		
+					</div>
+			
+
+				<div class="neirong_item">
+					<h1>MIUI主题</h1>
+				<div class="neirong_item1">
+					<h2>米奇-有你有我</h2>
+				</div>
+				<div class="neirong_item2">
+					<h3>米奇来啦，小米主题与迪士尼乐园首次合作，打造精品迪士尼乐园主题</h3>
+				</div>
+				<div class="neirong_item3">
+					<h4>12米币</h4>				
+				</div>
+				<div class="neirong_item4">
+					<img src="img/miqi.png" alt="">	
+				</div>			
+				</div>
+
+				<div class="neirong_item">
+					<h1>游戏</h1>
+				<div class="neirong_item1">
+					<h2>剑侠世界2</h2>
+				</div>
+				<div class="neirong_item2">
+					<h3>潮流武侠，炫动江湖</h3>
+				</div>
+				<div class="neirong_item3">
+					<h4></h4>				
+				</div>
+				<div class="neirong_item4">
+					<img src="img/jian.png" alt="">	
+				</div>	
+				</div>
+
+				<div class="neirong_item neirong_item5">
+					<h1>应用</h1>
+				<div class="neirong_item1">
+					<h2>2017金米将</h2>
+				</div>
+				<div class="neirong_item2">
+					<h3>最优秀的游戏与应用</h3>
+				</div>
+				<div class="neirong_item3">
+					<h4></h4>				
+				</div>
+				<div class="neirong_item4">
+					<img src="img/jinmi.png" alt="">	
+				</div>			
+				</div>
+			</div>
+			
+
 		</div>
 	</section>
 		<!-- 内容结束 -->

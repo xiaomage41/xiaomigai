@@ -1,7 +1,6 @@
 window.onload=function(){
 	// 头部选项卡
 	let head_car=document.getElementsByClassName("head_car")[0];
-	console.log(head_car);
 	let head_cars=document.getElementsByClassName("head_cars")[0];
 	head_car.onmouseenter=function(){
 		head_cars.style.display="block";
@@ -11,11 +10,8 @@ window.onload=function(){
 	}
 	// 导航选项卡
 	let nav=document.getElementsByClassName("nav")[0];
-	console.log(nav);
 	let span=nav.getElementsByTagName("span");
-	console.log(span);
 	let nav_kk=nav.getElementsByClassName("nav_kk");
-	console.log(nav_kk);
 	
 		for(let i=0;i<span.length-2;i++){
 
@@ -28,11 +24,8 @@ window.onload=function(){
 		}
 		// 侧导航选项卡
 		let banner=document.getElementById("banner");
-		console.log(banner);
 		let li=banner.getElementsByTagName("li");
-		console.log(li);
 		let banner_ss=banner.getElementsByClassName("banner_ss");
-		console.log(banner_ss);
 		for(let i=0;i<li.length;i++){
 			li[i].onmouseenter=function(){
 			banner_ss[i].style.display="block";
@@ -44,15 +37,10 @@ window.onload=function(){
 		//块选项卡
 		
 		let peijian=document.getElementsByClassName("peijian");
-		console.log(peijian);
 		for(let k=0;k<peijian.length;k++){
 
 		let x=peijian[k].getElementsByClassName("x");
-		console.log(x);
-		let zhineng_bottom1=peijian[k].getElementsByClassName("zhineng_bottom1");
-		console.log(zhineng_bottom1);
-
-		
+		let zhineng_bottom1=peijian[k].getElementsByClassName("zhineng_bottom1")	
 		for(let i=0;i<x.length;i++){
 			x[i].onmouseenter=function(){
 				for(let j=0;j<x.length;j++){
@@ -70,21 +58,14 @@ window.onload=function(){
 
 	//轮播图选项卡
 	let bann=document.getElementById("banner");
-	console.log(banner)
-	let banner_lbtn=document.getElementsByClassName("banner_lbtn")[0]
-	console.log(banner_lbtn)
-	let banner_rbtn=document.getElementsByClassName("banner_rbtn")[0]
-	console.log(banner_rbtn)
+	let banner_lbtn=document.getElementsByClassName("banner_lbtn")[0]	
+	let banner_rbtn=document.getElementsByClassName("banner_rbtn")[0]	
 	let y=banner.getElementsByClassName("y");
-	console.log(y)
-	
+	let banner_yuan=banner.getElementsByClassName("banner_yuan")	
 	let num=0;
-
 	let t=setInterval(move,2000);
-
 	banner.onmouseenter=function(){
 		clearInterval(t);
-
 	}
 	banner.onmouseleave=function(){
 		t=setInterval(move,2000);	
@@ -96,8 +77,10 @@ window.onload=function(){
 		}
 		for(i=0;i<y.length;i++){
 			y[i].style.zIndex=5;
+			banner_yuan[i].className=" banner_yuan"
 		}
 		y[num].style.zIndex=10;
+		banner_yuan[num].className="banner_yuan hot"
 	}
 	function move1(){
 		num--;
@@ -106,8 +89,10 @@ window.onload=function(){
 		}
 		for(i=0;i<y.length;i++){
 			y[i].style.zIndex=5;
+			banner_yuan[i].className=" banner_yuan"
 		}
 		y[num].style.zIndex=10;
+		banner_yuan[num].className="banner_yuan hot"
 	}
  	banner_rbtn.onclick=function(){
  		move();
@@ -115,6 +100,144 @@ window.onload=function(){
  	banner_lbtn.onclick=function(){
  		move1();
  	}
+
+ 	for(let j=0;j<banner_yuan.length;j++){
+ 		banner_yuan[j].onclick=function(){
+ 			for(let i=0;i<banner_yuan.length;i++){
+ 				y[i].style.zIndex=5;
+ 			banner_yuan[i].className="banner_yuan";
+ 			}
+ 			y[j].style.zIndex=10;
+ 			banner_yuan[j].className="banner_yuan hot";
+
+ 			num=j;
+ 		}
+
+ 	}
+
+ 	//双下标轮播图
+ 	
+ 	let neirong_k=document.querySelectorAll(".neirong_k")
+ 	console.log(neirong_k)
+ 	fn(neirong_k[0])
+ 	fn(neirong_k[1])
+ 	for (let i=0;i<neirong_k.length;i++){
+ 		fn(neirong_k[i]);
+ 	}
+ 	function fn(obj){
+	 	let neirong_item=obj.querySelectorAll(".neirong_item")
+	 	let widths=parseInt(getComputedStyle(neirong_item[0],null).width); 	
+	 	let neirong_lbtn= obj.querySelector(".neirong_lbtn");
+	 	let neirong_rbtn= obj.querySelector(".neirong_rbtn");
+	 	let neirongxiaodian= obj.querySelectorAll(".neirongxiaodian")
+	 	let now=0;
+	 	let next=0;
+	 	let flag=true;	
+	 	function move2(){
+	 		next++;
+	 		if(next==neirong_item.length){
+	 			next=0;
+	 		}
+	 		neirong_item[next].style.left=widths+"px";
+	 		animate(neirong_item[now],{left:-widths});
+	 		animate(neirong_item[next],{left:0},function(){
+	 			flag=true;
+	 		});
+	 		neirongxiaodian[now].classList.remove("quan");
+					neirongxiaodian[next].classList.add("quan");
+	 		now=next;
+	 	}
+	 	function move3(){
+	 		next--;
+	 		if(next<0){
+	 			next=neirong_item.length-1;
+	 		}
+	 		neirong_item[next].style.left=-widths+"px";
+	 		animate(neirong_item[now],{left:widths});
+	 		animate(neirong_item[next],{left:0},function(){
+	 			flag=true;
+	 		});
+	 		neirongxiaodian[now].classList.remove("quan");
+					neirongxiaodian[next].classList.add("quan");
+			now=next;
+	 	}
+	 	neirong_rbtn.onclick=function(){
+	 		if(flag==false){
+				return;
+			}
+			if(next==neirongxiaodian.length-1){
+				return;
+			}
+			flag=false;
+	 		move2()
+	 	}
+
+	 	neirong_lbtn.onclick=function(){
+	 		if(flag==false){
+				return;
+			}
+			if(next==0){
+				return;
+			}
+			flag=false;
+	 		move3()
+	 	}
+	 	neirongxiaodian.forEach(function(elements,index){
+	 		elements.onclick=function(){
+	 			if(index==now){
+	 				return;
+	 			}
+	 			if(index<now){
+	 				neirong_item[index].style.left=-widths+"px";
+	 				animate(neirong_item[now],{left:widths});
+	 				animate(neirong_item[index],{left:0});
+	 				neirongxiaodian[now].classList.remove("quan");
+					neirongxiaodian[index].classList.add("quan");
+	 				now=next=index;
+	 			}
+	 			if(index>now){
+					neirong_item[index].style.left=widths+"px";
+					animate(neirong_item[now],{left:-widths});
+					animate(neirong_item[index],{left:0});
+					neirongxiaodian[now].classList.remove("quan");
+					neirongxiaodian[index].classList.add("quan");
+					now=next=index;
+				}
+	 	}
+	 	})
+	 }
+ 	//明星选项卡
+ 	let star_btn=document.querySelector(".star_btn")
+ 	let button=document.getElementsByTagName("button")
+ 	let star_ttt=document.querySelector(".star_ttt")
+ 	let star_tttwidth=parseInt(getComputedStyle(star_ttt,null).width)/2
+ 	console.log(star_tttwidth)
+ 	let times=0;
+
+ 	button[1].onclick=function(){
+ 		times++;
+ 		if(times>1){
+ 			times=1;
+ 		}
+ 		star_ttt.style.transform='translateX('+(-star_tttwidth*times)+'px)';
+
+ 	}
+ 	button[0].onclick=function(){
+ 		times--;
+ 		if(times<0){
+ 			times=0;
+ 		}
+ 		star_ttt.style.transform='translateX('+(-star_tttwidth*times)+'px)';
+
+ 	}
+
+
+
+
+
+
+
+
 
 
 
@@ -128,6 +251,7 @@ window.onload=function(){
 
 
 }
+
 
 
 
