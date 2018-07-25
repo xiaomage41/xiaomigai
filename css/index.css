@@ -168,7 +168,6 @@
 .xiaomi_right{
 	width: 316px;
 	height: 170px;
-	background-color: yellow;
 	margin-left: 14px;
 	float: left;
 }
@@ -182,12 +181,10 @@
 	height: 460px;
 	margin : 0 auto;
 	position: relative;
-	position: relative;
 }
 .banner_img{
 	width: 1226px;
 	height: 460px;
-	background-color: blue;
 	position: relative;
 }
 .banner_img img{
